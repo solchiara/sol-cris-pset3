@@ -31,9 +31,10 @@ np.random.seed(42)
 data = pd.DataFrame(np.random.rand(100), columns=["Random Numbers"])
 
 def preview_data(df):
-    head = df.head()  # First object: head of the data frame
-
-    # Second object: Altair histogram of the 'Random Numbers' column
+    head = df.head()
+    
+    describe = df.describe()
+    
     hist = alt.Chart(df).mark_bar().encode(
         alt.X("Random Numbers", bin=True),
         alt.Y("count()")
@@ -41,7 +42,8 @@ def preview_data(df):
         title="Histogram of Random Numbers"
     )
     
-    return [head, hist]
+    return [head, describe, hist]
+
 
 preview_data(data)
 
