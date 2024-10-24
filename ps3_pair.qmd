@@ -1,6 +1,6 @@
 ---
 title: "30538 Problem Set 3: git pair"
-author: "Sol Rivas Lopes"
+author: "Sol Rivas Lopes &  Cristian Bancayan"
 format: 
   pdf:
     include-in-header: 
